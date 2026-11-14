@@ -1,11 +1,9 @@
 import { useRef, useEffect, useState } from 'react';
+import banner1 from '../../../assets/banner1.png';
+import banner2 from '../../../assets/banner2.png';
 
 function HeroSection() {
-  const heroImages = [
-    'https://images.unsplash.com/photo-1607082349566-187342175e2f?w=1600&auto=format&fit=crop',
-    'https://images.pexels.com/photos/7986993/pexels-photo-7986993.jpeg',
-    'https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=1600&auto=format&fit=crop',
-  ];
+  const heroImages = [banner1, banner2];
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
@@ -50,7 +48,7 @@ function HeroSection() {
 
       <div ref={scrollRef} className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth [&::-webkit-scrollbar]:hidden [scrollbar-width:none] rounded-md gap-2">
         {heroImages.map((imgUrl, index) => (
-          <img key={index} src={imgUrl} alt={`Banner Hero ${index + 1}`} className="w-full sm:h-72 h-48 object-cover flex-shrink-0 snap-center rounded-md" />
+          <img key={index} src={imgUrl} alt={`Banner Hero ${index + 1}`} className=" flex-shrink-0 snap-center rounded-md" />
         ))}
       </div>
 
