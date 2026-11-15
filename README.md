@@ -1,32 +1,36 @@
-# React + TypeScript + Vite
+# 🛒 Shop app
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An online shopping application interface that adapts to the screen sizes of various devices.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 🛠️ Tech Stack
 
-## React Compiler
+* **Primary Programming Language:** TypeScript
+* **CSS Framework:** Tailwind CSS
+* **Runtime & Package Manager:** Bun
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+### 📱 Mobile View
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+<p align="center">
+  <img src="./src/assets/iPhone-13-PRO-modern-shop-ui.vercel.app.png" alt="Mobile View 1" width="30%" />
+  <img src="./src/assets/iPhone-13-PRO-modern-shop-ui.vercel.app (1).png" alt="Mobile View 2" width="30%" />
+  <img src="./src/assets/iPhone-13-PRO-modern-shop-ui.vercel.app (2).png" alt="Mobile View 3" width="30%" />
+  <img src="./src/assets/iPhone-13-PRO-modern-shop-ui.vercel.app (3).png" alt="Mobile View 3" width="30%" />
+</p>
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+---
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### 💻 Desktop View
+
+<p align="center">
+  <img src="./src/assets/Macbook-Air-modern-shop-ui.vercel.app.png" alt="Desktop View 1" width="70%" />
+  <br><br>
+  <img src="./src/assets/Macbook-Air-modern-shop-ui.vercel.app (1).png" alt="Desktop View 2" width="70%" />
+  <br><br>
+  <img src="./src/assets/Macbook-Air-modern-shop-ui.vercel.app (2).png" alt="Desktop View 3" width="70%" />
+  <img src="./src/assets/Macbook-Air-modern-shop-ui.vercel.app (3).png" alt="Desktop View 3" width="70%" />
+  <img src="./src/assets/Macbook-Air-modern-shop-ui.vercel.app (4).png" alt="Desktop View 3" width="70%" />
+</p>
