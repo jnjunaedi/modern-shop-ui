@@ -192,23 +192,22 @@ const allProducts = [
   },
 ];
 
-function ProductSection() {
+function ProductsSection() {
   return (
     <div className="mt-10 mx-2">
-      <h1 className="text-xl">Products</h1>
+      <h1 className="text-xl">Semua Produk</h1>
       <div className="grid grid-cols-2 sm:grid-cols-5 lg:grid-cols-6 justify-center items-center gap-5 mt-5 ">
         {allProducts.map((a) => (
-          <div key={a.id}>
+          <div key={a.id} className="border p-1 rounded-md">
             <div>
               <img src={a.image} alt="" className="w-52 h-52 object-cover rounded-md" />
             </div>
             <div className="mt-2">
-              <p className="text-sm font-bold">{a.name}</p>
-              <p className="text-sm mt-1.5">{a.price}</p>
+              <p className="text-sm font-semibold">{a.name}</p>
+              <p className="text-sm mt-1.5 font-bold">{a.price}</p>
               <p className="text-xs mt-1">
                 Terjual {a.sold} | ⭐ {a.rating}
               </p>
-              <p className="text-xs"></p>
               <p className="text-xs flex items-center mt-1.5 gap-1">
                 <Store size={20} strokeWidth={1} /> {a.storeName}
               </p>
@@ -216,9 +215,9 @@ function ProductSection() {
           </div>
         ))}
       </div>
-      <p className="text-center mt-10 border border-blue-600 py-2 px-3 text-blue-600 mx-20 md:mx-56 lg:mx-80">Lihat selengkapnya</p>
+      <p className="text-center mt-10 border border-blue-600 py-2 px-3 text-blue-600 mx-20 md:mx-56 lg:mx-80 rounded-md">Lihat selengkapnya</p>
     </div>
   );
 }
 
-export default ProductSection;
+export default ProductsSection;

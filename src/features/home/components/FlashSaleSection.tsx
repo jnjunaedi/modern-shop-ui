@@ -117,23 +117,23 @@ function FlashSaleSection() {
     <div className="mt-10 mx-3">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <h1 className="text-xl">Flash Sale</h1>
+          <h1 className="text-xl font-bold">Flash Sale</h1>
 
           <div className="flex items-center gap-1">
-            <span className="bg-zinc-900 text-white text-xs px-2 py-1 rounded-md tabular-nums">{formatTime(hours)}</span>
+            <span className="bg-blue-600 text-white text-xs px-1 py-1 md:px-2 md:py-2 rounded-md tabular-nums">{formatTime(hours)}</span>
             <span className="text-sm font-bold">:</span>
-            <span className="bg-zinc-900 text-white text-xs px-2 py-1 rounded-md tabular-nums">{formatTime(minutes)}</span>
+            <span className="bg-blue-600 text-white text-xs px-1 py-1 md:px-2 md:py-2 rounded-md tabular-nums">{formatTime(minutes)}</span>
             <span className="text-sm font-bold">:</span>
-            <span className="bg-zinc-900 text-white text-xs px-2 py-1 rounded-md tabular-nums">{formatTime(seconds)}</span>
+            <span className="bg-blue-600 text-white text-xs px-1 py-1 md:px-2 md:py-2 rounded-md tabular-nums">{formatTime(seconds)}</span>
           </div>
         </div>
 
         <div className="flex gap-2">
-          <button type="button" onClick={scrollLeft} aria-label="Scroll Left" className="p-1.5 rounded-md bg-zinc-100 hover:bg-zinc-200 border border-zinc-300 cursor-pointer transition-colors">
+          <button type="button" onClick={scrollLeft} aria-label="Scroll Left" className="p-1.5 rounded-full border bg-white shadow-sm hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed transition">
             <ChevronLeft className="w-5 h-5" />
           </button>
 
-          <button type="button" onClick={scrollRight} aria-label="Scroll Right" className="p-1.5 rounded-md bg-zinc-100 hover:bg-zinc-200 border border-zinc-300 cursor-pointer transition-colors">
+          <button type="button" onClick={scrollRight} aria-label="Scroll Right" className="p-1.5 rounded-full border bg-white shadow-sm hover:bg-gray-100 disabled:opacity-30 disabled:cursor-not-allowed transition">
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
@@ -141,14 +141,14 @@ function FlashSaleSection() {
 
       <div ref={sliderRef} className="mt-5 flex overflow-x-auto gap-3 pb-3 scroll-smooth [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
         {products.map((product) => (
-          <div key={product.id} className="w-fit shrink-0">
+          <div key={product.id} className="w-fit shrink-0 border p-1 rounded-md">
             <div className="bg-zinc-100">
               <img src={product.image} alt={product.name} className="w-40 h-40 object-cover rounded-md" />
             </div>
 
-            <div className="p-1">
-              <p className="text-sm font-bold">{product.name}</p>
-              <p className="text-xs mt-1">{product.price}</p>
+            <div className="p-1 mt-1">
+              <p className="text-sm font-semibold">{product.name}</p>
+              <p className="text-sm mt-1 font-bold">{product.price}</p>
               <p className="text-xs line-through mt-1">{product.originalPrice}</p>
             </div>
           </div>

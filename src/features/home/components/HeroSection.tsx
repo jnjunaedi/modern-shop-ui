@@ -1,9 +1,11 @@
 import { useRef, useEffect, useState } from 'react';
-import banner1 from '../../../assets/banner1.png';
-import banner2 from '../../../assets/banner2.png';
 
 function HeroSection() {
-  const heroImages = [banner1, banner2];
+  const heroImages = [
+    'https://res.cloudinary.com/dvrjwaen/image/upload/v1795136298/Belanja_Hemat_Promo_Terbaik_nya.png',
+    'https://res.cloudinary.com/dvrjwaen/image/upload/v1795136408/Tech_Sale__Up_to_50_Off.png',
+    'https://res.cloudinary.com/dvrjwaen/image/upload/v1795136348/Pastel_Lifestyle_Essentials_Sale.png',
+  ];
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
